@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal-window.js":[function(require,module,exports) {
+})({"js/modal-window2.js":[function(require,module,exports) {
 (function () {
   var refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
@@ -336,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-window.js"], null)
-//# sourceMappingURL=/modal-window.2529b1f5.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-window2.js"], null)
+//# sourceMappingURL=/modal-window2.446753de.js.map

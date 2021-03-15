@@ -117,20 +117,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal-window.js":[function(require,module,exports) {
+})({"js/mobile-menu.js":[function(require,module,exports) {
 (function () {
-  var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
-  };
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-
-  function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.modal.classList.toggle('is-hidden');
-  }
+  var menuBtnRef = document.querySelector("[data-menu-button]");
+  var mobileMenuRef = document.querySelector("[data-menu]");
+  var mobileBtnClose = document.querySelector("[data-menu-close]");
+  menuBtnRef.addEventListener("click", function () {
+    mobileMenuRef.classList.toggle("is-open");
+  });
+  mobileBtnClose.addEventListener('click', function () {
+    mobileMenuRef.classList.toggle("is-open");
+  });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -336,5 +333,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-window.js"], null)
-//# sourceMappingURL=/modal-window.2529b1f5.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/mobile-menu.js"], null)
+//# sourceMappingURL=/mobile-menu.02d75e0a.js.map
