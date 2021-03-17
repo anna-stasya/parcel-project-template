@@ -128,6 +128,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   mobileBtnClose.addEventListener('click', function () {
     mobileMenuRef.classList.toggle("is-open");
   });
+  $(document).mouseup(function (e) {
+    // событие клика по веб-документу
+    var div = $(".mobile-menu"); // Элемент, клик по которому не должен приводить к закрытию. 
+
+    if (!div.is(e.target) // если клик был не по нашему блоку
+    && div.has(e.target).length === 0) {
+      // и не по его дочерним элементам
+      $('.mobile-menu').removeClass('is-open'); // $('.mobile-menu__background').removeClass('menu-bcg');
+    }
+  });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -157,7 +167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55763" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50184" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
