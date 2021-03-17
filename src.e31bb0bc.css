@@ -322,6 +322,7 @@ header .menu-list-link {
   font-size: 14px;
   line-height: 1.286;
   color: var(--white);
+  display: inline;
   padding-top: 12px;
   padding-bottom: 12px;
   display: inline-block;
@@ -331,8 +332,12 @@ header .menu-list-link:focus, header .menu-list-link:hover {
   color: var(--dark-pink);
 }
 header .menu-list-item {
+  width: 100%;
   padding-left: 21px;
   border-top: 1px solid var(--mobile-menu-pseudo-color);
+}
+header .menu-list-item:last-child {
+  border-bottom: 1px solid var(--mobile-menu-pseudo-color);
 }
 header .menu-close-btn {
   background-color: transparent;
@@ -1292,6 +1297,11 @@ header .menu-close-icon {
 .about-section {
   background-color: var(--backgroundPink);
 }
+@media screen and (min-width: 1280px) {
+  .about-section {
+    background-color: #ffffff;
+  }
+}
 
 .about {
   max-width: 1600px;
@@ -1496,6 +1506,11 @@ header .menu-close-icon {
 
 .advantages {
   background-color: var(--backgroundPink);
+}
+@media screen and (min-width: 1280px) {
+  .advantages {
+    background-color: #ffffff;
+  }
 }
 
 @media screen and (max-width: 767px) {
