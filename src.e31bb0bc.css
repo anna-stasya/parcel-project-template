@@ -39,7 +39,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -269,7 +269,7 @@ a {
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 420px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -427,11 +427,10 @@ header .mobile-menu {
   width: 100%;
   max-width: 250px;
   height: 100vh;
-  max-height: 502px;
   background-color: var(--mobile-menu-bg-color);
   box-shadow: -8px 0px 20px rgba(0, 0, 0, 0.25);
   padding-top: 60px;
-  z-index: 150;
+  z-index: 5;
   position: fixed;
   top: 0;
   right: 0;
@@ -568,6 +567,12 @@ header .menu-close-icon {
   border-radius: 22px;
   color: var(--white);
   background-color: var(--dark-pink);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero .nav .button-product:hover,
+.hero .nav .button-product:focus {
+  background-color: var(--white);
+  color: var(--dark-pink);
 }
 .hero .nav .button-him {
   color: var(--dark-pink);
@@ -2059,6 +2064,11 @@ header .menu-close-icon {
     background-position: center;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container-contacts .container {
+    padding-top: 84px;
+  }
+}
 
 .contacts {
   display: flex;
@@ -2198,6 +2208,10 @@ header .menu-close-icon {
   font-weight: 500;
   line-height: 1.5;
   color: var(--grey);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-item:hover, .contacts-item:focus {
+  color: var(--dark-pink);
 }
 
 .contact-list {
@@ -2257,11 +2271,12 @@ header .menu-close-icon {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.312;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-button-whitehover, .contact-button-whitefucus {
-  background-color: var(--dark-pink);
-  border: 1px solid var(--dark-pink);
-  color: var(--white);
+.contact-button-white:hover, .contact-button-white:focus {
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--dark-pink);
 }
 
 .contact-button-pink {
@@ -2278,8 +2293,9 @@ header .menu-close-icon {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.312;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-button-pinkhover, .contact-button-pinkfucus {
+.contact-button-pink:hover, .contact-button-pink:focus {
   background-color: var(--white);
   border: 1px solid var(--white);
   color: var(--dark-pink);
