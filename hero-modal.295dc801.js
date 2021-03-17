@@ -117,18 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modal-window.js":[function(require,module,exports) {
+})({"js/hero-modal.js":[function(require,module,exports) {
 (function () {
   var refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]')
+    openModalBtn: document.querySelector('[data-hero-modal-open]'),
+    closeModalBtn: document.querySelector('[data-hero-modal-close]'),
+    modal: document.querySelector('[data-hero-modal]')
   };
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    document.body.classList.toggle("modal-open");
+    document.body.classList.toggle("hero-modal-open");
     refs.modal.classList.toggle('is-hidden');
   }
 })();
@@ -336,5 +336,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal-window.js"], null)
-//# sourceMappingURL=/modal-window.2529b1f5.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/hero-modal.js"], null)
+//# sourceMappingURL=/hero-modal.295dc801.js.map
